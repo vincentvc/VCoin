@@ -1,51 +1,119 @@
 import hashlib
 import json
 from .Block import Block
+from .Config.Config import *
 from time import time
+
+
 
 class Blockchain:
     def __init__(self):
-        self.transactions = []
         self.nodes = set()
-        self.blockchain = [self.get_genesis_block()]
+        self.blockchain = [self._get_genesis_block()]
 
 
-    def get_latest_difficulty(self):
-        #TODO
-        return
+    def get_difficulty(self):
+        last_block = self.blockchain[-1]
+        if last_block.index % DIFFICULTY_ADJUSTMENT_INTERVAL == 0 and last_block.index != 0:
+            return self.get_adjusted_difficulty()
+        else:
+            return last_block.difficulty
 
-    def verify_signature(self,sender_address,signature,trasaction):
-        return 0
+    def get_adjusted_difficulty(self):
+        last_block = self.blockchain[-1]
+        actual_block_time_interval = last_block.timestamp - self.blockchain[-1-DIFFICULTY_ADJUSTMENT_INTERVAL]
+        expected_block_time_interval = DIFFICULTY_ADJUSTMENT_INTERVAL*BLOCK_GENERATION_INTERVAL
+
+        if actual_block_time_interval < expected_block_time_interval:
+            return last_block.difficulty + 1
+        elif actual_block_time_interval > expected_block_time_interval:
+            return last_block.difficulty - 1
+        else:
+            return last_block.difficulty
+
+    def resolve_blockchain_conflicts(self, new_blockchain):
+        if self._is_valid_blockchain(new_blockchain):
+            pass
+        elif self._get_accumlated_difficulty(new_blockchain) > self._get_accumlated_difficulty(self.blockchain):
+            self.blockchain = new_blockchain
+            #TODO Need BoardCast
+
+    def add_block(self,new_block):
+        if self._is_valid_new_block(previous_block=self.blockchain[-1],new_block=new_block):
+            self.blockchain.append(new_block)
+            return True
+        else:
+            return False
+
+    def find_valid_block(self,block):
+        block.nonce = 0
+        while True:
+            hash = self.get_block_hash(block)
+            if self._is_valid_proof_of_work(hash,block.difficulty):
+                return block
+            block.nonce = block.nonce + 1
+
+    @classmethod
+    def _get_accumlated_difficulty(cls,blockchain):
+        accumulated_difficulty = 0
+        for block in blockchain:
+            accumulated_difficulty = accumulated_difficulty + block.difficulty
+        return accumulated_difficulty
 
 
-    def verify_block(self,block):
-        return 0
+    @classmethod
+    def _is_valid_blockchain(cls,blockchain):
+        block_index = 1
+        if blockchain[0].__dict__ != cls._get_genesis_block.__dict__:
+            return False
+        while block_index < len(blockchain):
+            if not cls._is_valid_proof_of_work(blockchain[block_index]):
+                return False
+            elif not cls._is_valid_new_block(previous_block=blockchain[block_index-1],new_block=blockchain[block_index]):
+                return False
+        return True
 
-    def create_block(self,previous_hash,nonce):
+
+    @classmethod
+    def _is_valid_new_block(cls,previous_block,new_block):
+        if previous_block.index != new_block.index -1:
+            return False
+        elif previous_block.hash != new_block.previous_block_hash:
+            return False
+        elif not cls._is_valid_proof_of_work(new_block):
+            return False
+        return True
+
+
+    @staticmethod
+    def _is_valid_proof_of_work(hash, difficulty=DIFFICULTY):
         """
-        :param previous_hash:
-        :param nonce:
-        Add a new block after verifying the new block
+        :param hash: In binary
+        :param difficulty:
+        :return: True if transaction hash pass the difficulty threshold
         """
+        required_difficulty_predix = '0' * difficulty
+        return hash.startwith(required_difficulty_predix)
 
-        block = Block(id=len(self.blockchain)+1
-                      ,timestamp=time()
-                      ,nonce=nonce
-                      ,previous_hash=previous_hash
-                      )
-    def get_block_hash(self,block):
-        """
-        :param block:
-        :return: String: block hash
-
-        Hash block with ordered parameter
-        """
+    @staticmethod
+    def get_block_hash(block):
         return hashlib.sha256(json.dumps(block.__dict__, sort_keys=True).encode()).hexdigest()
-
-
 
 
     @staticmethod
     def _get_genesis_block():
-        return Block(0,"E6D5041797662ED8D9766D7C284B4C136FDA7CD803C040BB2ECA4B8C3A27A488","","Genesis Block",1525746201,0,0)
+        return Block(id=0
+                     ,hash="E6D5041797662ED8D9766D7C284B4C136FDA7CD803C040BB2ECA4B8C3A27A488"
+                     ,previous_hash=""
+                     ,transaction="ToDoTransaction"
+                     ,timestamp=1525746201
+                     ,difficulty=DIFFICULTY
+                     ,nonce=0)
 
+
+#TODO: Nodes, API Handling with Falcon
+
+
+if __name__ == '__main__':
+    from argparse import ArgumentParser
+    #TODO
