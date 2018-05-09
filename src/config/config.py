@@ -4,12 +4,12 @@ Mining Difficulty
 DIFFICULTY = 1
 
 """
-Block Generating Interval Minutes)
+block Generating Interval Minutes)
 """
 BLOCK_GENERATION_INTERVAL = 1
 
 """
-Difficulty Assignment Interval Block Count
+Difficulty Assignment Interval block Count
 """
 DIFFICULTY_ADJUSTMENT_INTERVAL = 1
 

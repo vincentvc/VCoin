@@ -1,9 +1,7 @@
 import hashlib
 import json
-from .Block import Block
-from .Config.Config import *
-from time import time
-
+from block.block import *
+from config.config import *
 
 
 class Blockchain:
@@ -52,6 +50,15 @@ class Blockchain:
             if self._is_valid_proof_of_work(hash,block.difficulty):
                 return block
             block.nonce = block.nonce + 1
+
+    def get_all_blockchain_json(self):
+        return json.dumps([block.__dict__ for block in self.blockchain])
+
+    def get_latest_block_json(self):
+        return json.dumps(self.blockchain[-1].__dict__)
+
+    def get_block_by_index(self,index):
+        return json.dumps(self.blockchain[index].__dict__)
 
     @classmethod
     def _get_accumlated_difficulty(cls,blockchain):
@@ -102,18 +109,12 @@ class Blockchain:
 
     @staticmethod
     def _get_genesis_block():
-        return Block(id=0
-                     ,hash="E6D5041797662ED8D9766D7C284B4C136FDA7CD803C040BB2ECA4B8C3A27A488"
-                     ,previous_hash=""
-                     ,transaction="ToDoTransaction"
-                     ,timestamp=1525746201
-                     ,difficulty=DIFFICULTY
-                     ,nonce=0)
+        return Block(index=0
+                     , hash="E6D5041797662ED8D9766D7C284B4C136FDA7CD803C040BB2ECA4B8C3A27A488"
+                     , previous_block_hash=""
+                     , transaction="ToDoTransaction"
+                     , timestamp=1525746201
+                     , difficulty=DIFFICULTY
+                     , nonce=0)
 
 
-#TODO: Nodes, API Handling with Falcon
-
-
-if __name__ == '__main__':
-    from argparse import ArgumentParser
-    #TODO
