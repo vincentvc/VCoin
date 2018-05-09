@@ -1,4 +1,3 @@
-print ("Ttest2")
+import hashlib
 
-if __name__ == '__main__':
-    print ('TEST3')
+print(hashlib.sha256("test","test2"))
