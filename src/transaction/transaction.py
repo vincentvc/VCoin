@@ -1,5 +1,6 @@
 import hashlib
 import json
+
 class TxOutput:
     def __init__(self,output_address,output_amount):
         self.output_address = output_address
@@ -26,8 +27,13 @@ class Transaction:
         self.TxOutput = TxOutput
         self.TxInput = TxInput
 
-    def get_transaction_id(self):
+    def get_tx_id(self):
         merge_dict = {**self.TxOutput.__dict__,**self.TxInput.__dict__}
         return hashlib.sha256(json.dumps(merge_dict,sort_keys=True).encode().hexdigest())
 
-    def sign_transaction(self):
+    def sign_tx_input(self,private_key):
+        signature = private_key.sign(self.hash_id)
+        return signature
+
+    def get_unspent_output(self):
+        pass

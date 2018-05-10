@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50eff589-2b21-4c62-88c5-f395b11afa5c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/blockchain/blockchain.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/blockchain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transaction/transaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/transaction/transaction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/wallet/wallet.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/wallet/wallet.py" afterDir="false" />
@@ -19,50 +21,8 @@
       <file leaf-file-name="blockchain.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blockchain/blockchain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="105" column="7" lean-forward="true" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="94" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wallet.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/wallet/wallet.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="transaction.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/transaction/transaction.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="block.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/block/block.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="442">
+              <caret line="53" column="31" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="31" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -73,10 +33,55 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+            <state relative-caret-position="408">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wallet.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/wallet/wallet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="37" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transaction.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/transaction/transaction.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="block.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/block/block.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="11" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,18 +123,18 @@
         <option value="$PROJECT_DIR$/src/static/templates/index.html" />
         <option value="$PROJECT_DIR$/src/test.py" />
         <option value="$PROJECT_DIR$/src/blockchain/__init__.py" />
-        <option value="$PROJECT_DIR$/src/main.py" />
         <option value="$PROJECT_DIR$/src/wallet/__init__.py" />
-        <option value="$PROJECT_DIR$/src/wallet/wallet.py" />
         <option value="$PROJECT_DIR$/src/blockchain/blockchain.py" />
-        <option value="$PROJECT_DIR$/src/test2.py" />
         <option value="$PROJECT_DIR$/src/transaction/transaction.py" />
+        <option value="$PROJECT_DIR$/src/main.py" />
+        <option value="$PROJECT_DIR$/src/wallet/wallet.py" />
+        <option value="$PROJECT_DIR$/src/test2.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="849" />
-    <option name="width" value="1078" />
+    <option name="x" value="728" />
+    <option name="width" value="1199" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -151,12 +156,6 @@
               <item name="VCoin" type="b2602c69:ProjectViewProjectNode" />
               <item name="VCoin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VCoin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VCoin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="transaction" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -252,15 +251,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="849" y="0" width="1078" height="1047" extended-state="0" />
+    <frame x="728" y="0" width="1199" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1629002" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18596788" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Python Console" order="0" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.1502146" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.1502146" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -317,6 +316,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -350,10 +352,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/block/block.py">
+    <entry file="file://$PROJECT_DIR$/src/ecdsa/ecdsa.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="-2494" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transaction/transaction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -362,25 +369,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/blockchain/blockchain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="105" column="7" lean-forward="true" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="94" />
+        <state relative-caret-position="442">
+          <caret line="53" column="31" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="31" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+        <state relative-caret-position="408">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -389,18 +389,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/wallet/wallet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/transaction/transaction.py">
+    <entry file="file://$PROJECT_DIR$/src/block/block.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        <state relative-caret-position="170">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="11" selection-end-column="24" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
         </state>
       </provider>
     </entry>

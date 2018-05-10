@@ -34,6 +34,7 @@ class Blockchain:
             pass
         elif self._get_accumlated_difficulty(new_blockchain) > self._get_accumlated_difficulty(self.blockchain):
             self.blockchain = new_blockchain
+            #TODO Need BoardCast
 
     def add_block(self,new_block):
         if self._is_valid_new_block(previous_block=self.blockchain[-1],new_block=new_block):
@@ -56,7 +57,7 @@ class Blockchain:
     def get_latest_block_json(self):
         return json.dumps(self.blockchain[-1].__dict__)
 
-    def get_block_by_index(self,index):
+    def get_block_by_index_json(self,index):
         return json.dumps(self.blockchain[index].__dict__)
 
     @classmethod
